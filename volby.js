@@ -2,8 +2,6 @@ var Volby,
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 window.onload = function() {
-  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "kraje", "kraje");
-  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "okresy", "okresy");
   return new Volby($("canvas").width(), $("canvas").height(), 0, 0, "obce", "obce");
 };
 

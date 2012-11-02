@@ -1,8 +1,8 @@
 
 
 window.onload = ->
-  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "kraje", "kraje")
-  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "okresy", "okresy")
+  #new Volby($("canvas").width(), $("canvas").height(), 0, 0, "kraje", "kraje")
+  #new Volby($("canvas").width(), $("canvas").height(), 0, 0, "okresy", "okresy")
   new Volby($("canvas").width(), $("canvas").height(), 0, 0, "obce", "obce")
 
 class Volby
