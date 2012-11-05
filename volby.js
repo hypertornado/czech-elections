@@ -2,6 +2,8 @@ var Volby,
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 window.onload = function() {
+  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "kraje", "kraje");
+  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "okresy", "okresy");
   return new Volby($("canvas").width(), $("canvas").height(), 0, 0, "obce", "obce");
 };
 
@@ -67,7 +69,7 @@ Volby = (function() {
   Volby.prototype.draw_path = function(path) {
     var color, first, p, trans, _i, _len;
     first = path[0];
-    color = "rgb(0, 0, " + (parseInt(256 * Math.random())) + ")";
+    color = "rgb(" + (100 + parseInt(100 * Math.random())) + ", 0, 0)";
     this.ctx.fillStyle = color;
     this.ctx.beginPath();
     trans = this.translate_coord(first[0], first[1]);

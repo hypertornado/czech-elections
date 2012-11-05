@@ -1,8 +1,8 @@
 
 
 window.onload = ->
-  #new Volby($("canvas").width(), $("canvas").height(), 0, 0, "kraje", "kraje")
-  #new Volby($("canvas").width(), $("canvas").height(), 0, 0, "okresy", "okresy")
+  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "kraje", "kraje")
+  new Volby($("canvas").width(), $("canvas").height(), 0, 0, "okresy", "okresy")
   new Volby($("canvas").width(), $("canvas").height(), 0, 0, "obce", "obce")
 
 class Volby
@@ -45,7 +45,7 @@ class Volby
 
   draw_path: (path) =>
     first = path[0]
-    color = "rgb(0, 0, #{parseInt(256 * Math.random())})"
+    color = "rgb(#{100 + parseInt(100 * Math.random())}, 0, 0)"
     @ctx.fillStyle = color;
     @ctx.beginPath()
     trans = @translate_coord(first[0], first[1])
